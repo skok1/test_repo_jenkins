@@ -3,6 +3,7 @@
 properties([disableConcurrentBuilds()])
 
 pipeline {
+    agent any // Allows any available agent for the pipeline
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
